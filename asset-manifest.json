@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/playwright-demo/static/js/main.3ac8c5c5.js",
+    "main.js": "/playwright-demo/static/js/main.f1b49518.js",
     "static/js/453.0da0896a.chunk.js": "/playwright-demo/static/js/453.0da0896a.chunk.js",
     "index.html": "/playwright-demo/index.html",
-    "main.3ac8c5c5.js.map": "/playwright-demo/static/js/main.3ac8c5c5.js.map",
+    "main.f1b49518.js.map": "/playwright-demo/static/js/main.f1b49518.js.map",
     "453.0da0896a.chunk.js.map": "/playwright-demo/static/js/453.0da0896a.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3ac8c5c5.js"
+    "static/js/main.f1b49518.js"
   ]
 }
