@@ -78,7 +78,7 @@ const Register = () => {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              href="/main"
+              href={process.env.PUBLIC_URL + "/main"}
               onClick={handleRegister}
             >
               Register
