@@ -15,10 +15,6 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
-    - name: Run application
-      run: npm run start
-    - name: Check application
-      run: curl -i http://localhost:3000/login
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
