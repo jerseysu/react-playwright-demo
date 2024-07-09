@@ -29,7 +29,6 @@ jobs:
     timeout-minutes: 60
     if: github.event.pull_request.merged == true
     name: 'deploy to github'
-    needs: [tests]
     runs-on: ubuntu-latest
     steps:
       - name: deploy to github page
