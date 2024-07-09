@@ -65,7 +65,7 @@ const Login = () => {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              href={process.env.PUBLIC_URL + "/main"}
+              href={process.env.PUBLIC_URL + "/home"}
               onClick={handleLogin}
             >
               Login
