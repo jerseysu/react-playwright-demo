@@ -16,8 +16,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {};
-
   return (
     <>
       <Container maxWidth="xs">
@@ -62,14 +60,15 @@ const Login = () => {
             />
 
             <Button
+              component={Link}
               fullWidth
+              to="/home"
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              href={process.env.PUBLIC_URL + "/home"}
-              onClick={handleLogin}
             >
               Login
             </Button>
+
             <Grid container justifyContent={"flex-end"}>
               <Grid item>
                 <Link to="/register">Don't have an account? Register</Link>

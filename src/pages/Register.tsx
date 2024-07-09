@@ -17,8 +17,6 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = async () => { };
-
   return (
     <>
       <Container maxWidth="xs">
@@ -74,16 +72,17 @@ const Register = () => {
                 />
               </Grid>
             </Grid>
+
             <Button
+              component={Link}
               fullWidth
+              to="/home"
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              href={process.env.PUBLIC_URL + "/home"}
-              data-test-locator = 'login'
-              onClick={handleRegister}
             >
               Register
             </Button>
+
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link to="/login">Already have an account? Login</Link>
