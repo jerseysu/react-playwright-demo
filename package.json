@@ -1,7 +1,7 @@
 {
   "name": "playwright-demo",
   "version": "1.0.0",
-  "homepage": "https://jerseysu.github.io/playwright-demo",
+  "homepage": "https://jerseysu.github.io/react-playwright-demo",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
