@@ -11,7 +11,7 @@ module.exports = {
         },
     ],
     "rules": {
-        "indent": "off",
-        "@typescript-eslint/indent": "error"
+        "key-spacing": "off",
+        "@typescript-eslint/key-spacing": "error"
     }
 };
