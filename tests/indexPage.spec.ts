@@ -1,8 +1,25 @@
 import { test, expect } from '@playwright/test';
+import { IndexPage } from './pages/indexPage';
+import { WelcomePage } from './pages/welcomePage';
 
-test('has title', async ({ page }) => {
-  await page.goto('/playwright-demo');
+test.describe('Login Page', () => {
+  test('has title', async ({ page }) => {
+    const playwrightDev = new IndexPage(page);
+    await playwrightDev.goto();
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Jersey's Login Page/);
+    // Expect a title "to contain" a substring.
+    await expect(page).toHaveTitle(/Jersey's Login Page/);
+  });
+
+  test('do login', async ({ page }) => {
+    const indexPage = new IndexPage(page);
+    await indexPage.goto();
+    await indexPage.loginAction();
+
+    const welcomePage = new WelcomePage(page);
+    const welcomeMsgText = await welcomePage.getWelcomeMsgText();
+
+    // Expect a welcome message LoginSuccess
+    await expect(welcomeMsgText).toContain('LoginSuccess');
+  });
 });
