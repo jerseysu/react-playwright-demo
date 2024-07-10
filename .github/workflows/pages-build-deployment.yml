@@ -1,16 +1,11 @@
-name: publish-pages-build-deployment
+name: Publish
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
-    types:
-      - closed
 
 jobs:
   deployment:
     timeout-minutes: 60
-    if: github.event.pull_request.merged == true
     name: "deploy to github"
     runs-on: ubuntu-latest
     steps:
