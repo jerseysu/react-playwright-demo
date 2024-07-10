@@ -2,6 +2,8 @@ name: Publish
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   deployment:
@@ -13,14 +15,25 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+      - name: Set output variables
+        id: vars
+        run: |
+          github_token=${{ secrets.GITHUB_TOKEN }}
+      - name: Wait for tests to succeed
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.ref }}
+          check-name: 'tests'
+          repo-token: ${{ steps.vars.outputs.github_token }}
+          wait-interval: 10
       - name: Install dependencies
         run: npm ci
       - name: Lint
         run: npm run lint
-      - name: build
+      - name: Build
         run: npm run build
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ steps.vars.outputs.github_token }}
           publish_dir: build
