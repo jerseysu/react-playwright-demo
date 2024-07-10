@@ -29,6 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:e2e": "npx playwright test",
+    "lint": "npx eslint .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
