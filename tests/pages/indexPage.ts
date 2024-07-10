@@ -26,7 +26,7 @@ export class IndexPage {
 
   async fillPassword() {
     // TODO: use the secret service.
-    await this.password.fill('Dev0psd@y2024');
+    await this.password.fill('');
     await expect(this.password).toBeVisible();
   }
 
