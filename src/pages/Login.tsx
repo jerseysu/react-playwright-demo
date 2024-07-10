@@ -40,7 +40,9 @@ const Login = () => {
               id="email"
               label="Email Address"
               name="email"
+              data-testid="email"
               autoFocus
+              type="textbox"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -51,8 +53,9 @@ const Login = () => {
               fullWidth
               id="password"
               name="password"
+              data-testid="password"
               label="Password"
-              type="password"
+              type="textbox"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
@@ -61,6 +64,7 @@ const Login = () => {
 
             <Button
               component={Link}
+              data-testid="loginButton"
               fullWidth
               to="/home"
               variant="contained"
@@ -71,7 +75,7 @@ const Login = () => {
 
             <Grid container justifyContent={"flex-end"}>
               <Grid item>
-                <Link to="/register">Don't have an account? Register</Link>
+                <Link to="/register" data-testid="registerLink">Don't have an account? Register</Link>
               </Grid>
             </Grid>
           </Box>

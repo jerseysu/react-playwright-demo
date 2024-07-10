@@ -42,6 +42,7 @@ const Register = () => {
                   fullWidth
                   id="name"
                   label="Name"
+                  data-testid="name"
                   autoFocus
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -54,6 +55,7 @@ const Register = () => {
                   fullWidth
                   id="email"
                   label="Email Address"
+                  data-testid="email"
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -65,7 +67,8 @@ const Register = () => {
                   fullWidth
                   name="password"
                   label="Password"
-                  type="password"
+                  type="textbox"
+                  data-testid="password"
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -75,6 +78,7 @@ const Register = () => {
 
             <Button
               component={Link}
+              data-testid="registerButton"
               fullWidth
               to="/home"
               variant="contained"
@@ -85,7 +89,7 @@ const Register = () => {
 
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to="/login">Already have an account? Login</Link>
+                <Link to="/login" data-testid="loginLink">Already have an account? Login</Link>
               </Grid>
             </Grid>
           </Box>
