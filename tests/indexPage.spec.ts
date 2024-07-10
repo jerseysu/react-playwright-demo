@@ -4,8 +4,8 @@ import { WelcomePage } from './pages/welcomePage';
 
 test.describe('Login Page', () => {
   test('has title', async ({ page }) => {
-    const playwrightDev = new IndexPage(page);
-    await playwrightDev.goto();
+    const indexPage = new IndexPage(page);
+    await indexPage.goto();
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Jersey's Login Page/);

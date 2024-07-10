@@ -1,22 +1,29 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
-export class IndexPage {
+export class RegisterPage {
   readonly page: Page;
+  readonly name: Locator;
   readonly email: Locator;
   readonly password: Locator;
-  readonly loginButton: Locator;
-  readonly registerLink: Locator;
+  readonly registerButton: Locator;
+  readonly loginLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
+    this.name = page.locator('div[data-testid="name"] input');
     this.email = page.locator('div[data-testid="email"] input');
     this.password = page.locator('div[data-testid="password"] input');
-    this.loginButton = page.locator('a[data-testid="loginButton"]');
-    this.registerLink = page.locator('a[data-testid="registerLink"]');
+    this.registerButton = page.locator('a[data-testid="registerButton"]');
+    this.loginLink = page.locator('a[data-testid="loginLink"]');
   }
 
   async goto() {
-    await this.page.goto('/react-playwright-demo');
+    await this.page.goto('/react-playwright-demo/register');
+  }
+
+  async fillName() {
+    await this.name.fill('JerseyAwesome');
+    await expect(this.name).toBeVisible();
   }
 
   async fillEmail() {
@@ -30,9 +37,10 @@ export class IndexPage {
     await expect(this.password).toBeVisible();
   }
 
-  async loginAction() {
+  async registerAction() {
+    await this.fillName();
     await this.fillEmail();
     await this.fillPassword();
-    await this.loginButton.click();
+    await this.registerButton.click();
   }
 }
