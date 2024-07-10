@@ -5,11 +5,16 @@
 [![Playwright-Tests](https://github.com/jerseysu/react-playwright-demo/actions/workflows/playwright.yml/badge.svg)](https://github.com/jerseysu/react-playwright-demo/actions/workflows/playwright.yml)
 [![Publish](https://github.com/jerseysu/react-playwright-demo/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/jerseysu/react-playwright-demo/actions/workflows/pages/pages-build-deployment)
 
+
+![](logo-new-dark.png)
+
 The React Playwright Demo App is based on following instruction:
 
 React Developer Guide: [React Developer Guide](https://react.dev/)
 
 Playwright Developer Guide: [Playwright Developer Guide](https://playwright.dev/)
+
+
 
 Sample Login/Register App Example: [Sample Login/Register App Example](https://medium.com/@prabhashi.mm/create-a-simple-react-app-typescript-with-login-register-pages-using-create-react-app-e5c12dd6db53)
 
