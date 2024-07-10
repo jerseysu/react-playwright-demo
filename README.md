@@ -83,4 +83,4 @@ Blog: - WIP~
 
 ## Author
 
-Jersey Su – [@jerseysu](https://twitter.com/jerseysu)
+Jersey Su – [@jerseysu](https://twitter.com/jersey_su)
