@@ -1,11 +1,7 @@
 name: Publish
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   workflow_run:
-    workflows: ['Playwright Tests']
+    workflows: ['Playwright-Tests']
     types:
       - completed
 
@@ -14,6 +10,7 @@ jobs:
     timeout-minutes: 60
     name: "deploy to github"
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
