@@ -13,6 +13,8 @@ Playwright Developer Guide: [Playwright Developer Guide](https://playwright.dev/
 
 Sample Login/Register App Example: [Sample Login/Register App Example](https://medium.com/@prabhashi.mm/create-a-simple-react-app-typescript-with-login-register-pages-using-create-react-app-e5c12dd6db53)
 
+![](devopsday.gif)
+
 ## Prerequisites
 
 - node 20.15.1
@@ -79,7 +81,7 @@ export class IndexPage {
 
 ## Documentation:
 
-Blog: - WIP~
+Blog: - [Shift Left Testing feat. react, playwright and github actions](https://medium.com/@loverjersey/%E7%95%B6%E6%B8%AC%E8%A9%A6%E9%96%8B%E5%A7%8B%E5%B7%A6%E7%A7%BB-feat-react-playwright-and-github-action-f5e87d999cd6)
 
 ## Author
 
