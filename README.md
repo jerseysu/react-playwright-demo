@@ -35,6 +35,14 @@ $ npm run start
 
 ## Execution Test:
 
+### Execute the Unit test
+
+```sh
+# run unit test
+$ npm run test
+```
+
+
 ### Execute the Playwright test
 
 ```sh
