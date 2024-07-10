@@ -9,7 +9,6 @@
     "@mui/icons-material": "^5.16.0",
     "@mui/material": "^5.16.0",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^20.14.10",
@@ -27,7 +26,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
+    "test:ci": "CI=true react-scripts test  --no-watchAll --coverage",
     "test:e2e": "npx playwright test",
     "lint": "npx eslint .",
     "eject": "react-scripts eject"
@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.45.1",
+    "@testing-library/react": "^16.0.0",
     "gh-pages": "^6.1.1",
     "typescript-eslint": "^7.16.0"
   }
