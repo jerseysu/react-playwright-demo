@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 it('renders welcome message', () => {
     render(<LoginSuccess />, { wrapper: BrowserRouter });
-    expect(screen.getByText(/LoginSuccess/i)).toBeInTheDocument();
+    expect(screen.getByText(/Success/i)).toBeInTheDocument();
     expect(screen.getByAltText(/Jersey/i)).toBeInTheDocument();
     expect(screen.getByRole('img')).toBeInTheDocument();
 });
